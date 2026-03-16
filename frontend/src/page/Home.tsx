@@ -1,0 +1,21 @@
+import Navbar from "../components/Navbar"
+import './home.css'
+
+function Home() {
+	return (
+	  <div className="container">
+		<Navbar />
+		<h1>Cyril Salamite</h1>
+		<p>I’m a developer currently studying at 42 Málaga. During my time there I’ve been building projects mainly in C, C++ and Docker, which helped me develop strong problem-solving skills and a solid understanding of how software works.
+
+At the same time, I worked for six months at Aispoken as a mobile frontend developer using React Native, where I helped build features for mobile applications and gained experience working in a real development environment.
+
+Before moving into tech, I spent several years working in commercial roles. That experience helped me develop strong communication skills and a practical understanding of users and business needs.
+
+Today I’m focused on becoming a full-stack developer. I enjoy working across the stack, from backend logic to building clean and intuitive user interfaces, and I’m always learning by building real projects and improving my tools and workflow.
+</p>
+	  </div>
+	)
+  }
+  
+  export default Home
