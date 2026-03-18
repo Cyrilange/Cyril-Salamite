@@ -1,16 +1,19 @@
 .container{
 	max-width: 1300px;
-	margin: 5px auto;
+	margin: 12rem auto;
 }
-
-h1 {
-	font-size: clamp(2rem, 5vw, 4rem);
-	text-align: center;
-  }
 
   p {
 	font-size: clamp(0.7rem, 5vw, 1rem);
 	text-align: left;
+	max-width: 35rem;
 	line-height: 2.3rem;
 	
+  }
+
+  @media (max-width: 1024px) {
+	p {
+		margin-left: 0.7rem;
+		margin-right: 0.7rem;
+	}
   }
