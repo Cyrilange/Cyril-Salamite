@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   philosophers.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csalamit <csalamit@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: csalamit <csalamit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-07-13 15:42:17 by csalamit          #+#    #+#             */
-/*   Updated: 2025-07-13 15:42:17 by csalamit         ###   ########.fr       */
+/*   Created: 2025/07/13 15:42:17 by csalamit          #+#    #+#             */
+/*   Updated: 2026/03/20 18:18:54 by csalamit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef PHILOSOPHERS_H
-# define PHILOSOPHERS_H
+
+#pragma once
 
 # include <pthread.h>
 # include <stdio.h>
@@ -21,7 +21,7 @@
 # include <stdbool.h>
 # include <errno.h>
 
-/* 🎨 Colors & Emojis */
+
 # define RESET "\033[0m"
 # define RED "\033[1;31m"
 # define ROSE "\033[38;5;200m"
@@ -33,7 +33,7 @@
 # define EMOJI_FORK "🍴"
 # define EMOJI_EAT "🍝"
 
-/* Typedefs & Enums */
+
 typedef pthread_mutex_t   t_mutex;
 typedef struct s_data     t_data;
 typedef struct s_philosopher t_philosopher;
@@ -140,4 +140,3 @@ int		philo_is_eating(t_philosopher *philosopher);
 /* ---------------------- 🚪 Exit & Cleanup ---------------------- */
 void	ft_exit(t_data *data);
 
-#endif

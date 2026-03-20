@@ -10,16 +10,12 @@ function Navbar() {
 		setIsOpen(prev => !prev)
 	}
 
-	const scrollToAbout = (e: React.MouseEvent) => {
-		e.preventDefault();
-		navigate('/');
-		setTimeout(() => {
-			const element = document.getElementById('about');
-			if (element) {
-				element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 150);
-	}
+	const scrollTo = (id: string) => {
+  navigate('/');
+  setTimeout(() => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }, 150);
+};
 
 	return (
 		<header className="contain">
@@ -37,12 +33,12 @@ function Navbar() {
 				<h1>Cyril Salamite</h1>
 			</div>
 			<ul className="list">
-				<li><Link to="/" onClick={scrollToAbout}>About</Link></li>
+				<li><Link to="/" onClick={() => scrollTo("about")}>About</Link></li>
 				<li onClick={toggleMenu} id="proj">Projects</li>
 				{
 					isOpen && (
 						<ul className={isOpen ? "open" : ""}>
-							<li><Link to="/projects/minishell">Minishell</Link></li>
+							<li><Link to="/projects/minishell" onClick={() => scrollTo("mins")}>Minishell</Link></li>
 							<li><Link to="/projects/philosophers">Philosophers</Link></li>
 							<li><Link to="/projects/push-swap">Push_swap</Link></li>
 						</ul>

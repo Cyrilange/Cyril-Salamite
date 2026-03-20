@@ -11,9 +11,8 @@ RESET = \033[0m
 all: help
 
 help:
-	@echo "$(BLUE)╔════════════════════════════════════════════════╗$(RESET)"
-	@echo "$(BLUE)║     Portfolio - Docker Management Commands    ║$(RESET)"
-	@echo "$(BLUE)╚════════════════════════════════════════════════╝$(RESET)"
+	@echo "$(BLUE)Portfolio managment$(RESET)"
+	
 	@echo ""
 	@echo "$(GREEN)Development:$(RESET)"
 	@echo "  make build         - Build all containers"

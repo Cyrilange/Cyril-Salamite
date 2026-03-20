@@ -1,27 +1,30 @@
-FROM node:18-alpine
+FROM node:18
 
-# Install build tools and readline library
-RUN apk add --no-cache \
-    gcc \
-    g++ \
-    make \
-    musl-dev \
-    readline-dev \
-    ncurses-dev
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libreadline-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-# Install Node.js dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy source code
 COPY . .
 
-# Compile C programs
-RUN cd c_programs/minishell && make && cd ../.. || echo "Minishell compilation failed"
-RUN cd c_programs/philosophers && make && cd ../.. || echo "Philosophers compilation failed"
-RUN cd c_programs/push_swap && make && cd ../.. || echo "Push_swap compilation failed"
+
+ENV TERM=xterm
+
+WORKDIR /app/c_programs/minishell
+RUN make
+
+WORKDIR /app/c_programs/philosophers
+RUN make
+
+WORKDIR /app/c_programs/push_swap
+RUN make
+
+WORKDIR /app
 
 EXPOSE 5000
 
