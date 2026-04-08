@@ -12,7 +12,7 @@ function Resume() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/experiences")
+    fetch("https://cyril-salamite.onrender.com")
       .then(res => res.json())
       .then(data => setExperiences(data))
       .catch(err => console.error(err));
