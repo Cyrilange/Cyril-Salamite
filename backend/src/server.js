@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 const http = require('http');
 const { WebSocketServer } = require('ws');
 const crypto = require("crypto");
-const { spawn } = require("child_process");
 const pty = require("node-pty");
+
+const experiences = require("./resume");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -26,34 +27,8 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK' });
 });
 
-
-wss.on("connection", (ws) => {
-  const id = crypto.randomUUID();
-
-  const shell = pty.spawn("./c_programs/minishell/minishell", [], {
-    name: "xterm-color",
-    cols: 80,
-    rows: 30,
-    cwd: process.cwd(),
-    env: { ...process.env, TERM: "xterm-256color" }
-  });
-
-  sessions.set(id, { ws, shell });
-
-  ws.send("SESSION_CREATED");
-
-  shell.onData((data) => {
-    ws.send(data);
-  });
-
-  ws.on("message", (msg) => {
-    shell.write(msg.toString());
-  });
-
-  ws.on("close", () => {
-    shell.kill();
-    sessions.delete(id);
-  });
+app.get("/experiences", (req, res) => {
+  res.json(experiences);
 });
 
 server.listen(PORT, () => {

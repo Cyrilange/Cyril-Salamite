@@ -15,13 +15,13 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vw;
+  height: 100%;
   font-family: 'Space Grotesk', sans-serif;
   line-height: 1.5;
   background: linear-gradient(
     135deg,
-    #111 68%,
-    var(--accent-color) 32%
+    #111 90%,
+    var(--accent-color) 10%
   );
   color: var(--text-main);
 }
