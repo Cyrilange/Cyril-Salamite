@@ -38,9 +38,9 @@ function Navbar() {
 				{
 					isOpen && (
 						<ul className={isOpen ? "open" : ""}>
-							<li><Link to="/projects/minishell" onClick={() => scrollTo("mins")}>Minishell</Link></li>
-							<li><Link to="/projects/philosophers">Philosophers</Link></li>
-							<li><Link to="/projects/push-swap">Push_swap</Link></li>
+							<li><Link to="/projects/minishell" state={{scrollTo:"mins"}}>Minishell</Link></li>
+							<li><Link to="/projects/ft_irc" state={{scrollTo:"irc"}}>ft_irc</Link></li>
+							<li><Link to="/projects/Tokenizers" state={{scrollTo:"sf2"}}>tokenizers</Link></li>
 						</ul>
 					)
 				}

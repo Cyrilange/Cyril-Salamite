@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import './home.css'
-import Resume from '../components/Resume';
+//import Resume from '../components/Resume';
 
 function Home() {
 	useEffect(() => {
-		
+
 		const hash = window.location.hash;
 		if (hash === '#about') {
 			setTimeout(() => {
@@ -28,7 +28,7 @@ function Home() {
 				Today I'm focused on becoming a full-stack developer. I enjoy working across the stack, from backend logic to building clean and intuitive user interfaces, and I'm always learning by building real projects and improving my tools and workflow.
 			</p>
 			<div className="cv">
-				<Resume />
+				
 			</div>
 		</div>
 	)
