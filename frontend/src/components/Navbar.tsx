@@ -18,8 +18,8 @@ function Navbar() {
 };
 
 	return (
-		<header className="contain">
-			<div className="container-port">
+		<header className="contain ">
+			<div className="container-port hidden sm:block">
 				<div className="triple-circle e1 c1"></div>
 				<div className="triple-circle e1 c2"></div>
 				<div className="triple-circle e1 c3"></div>

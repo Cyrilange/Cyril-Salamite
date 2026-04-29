@@ -64,8 +64,8 @@ img {
   body {
     background: linear-gradient(
       90deg,
-      #111 95%,
-      var(--accent-color) 5%
+      #111 99%,
+      var(--accent-color) 1%
     );
   }
   

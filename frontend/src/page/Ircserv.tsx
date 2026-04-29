@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -17,7 +17,7 @@ export default function IrcServ() {
     <div className="min-h-screen flex justify-center p-6">
       <div className="w-full max-w-4xl bg-white rounded-xl shadow-md p-8" id="irc">
 
-        {/* TITLE */}
+        
         <h1 className="text-4xl font-bold mb-2">IRC Server (ft_irc)</h1>
 
         <a
@@ -29,7 +29,7 @@ export default function IrcServ() {
           https://github.com/Cyrilange/ft_irc
         </a>
 
-        {/* DESCRIPTION */}
+       
         <p className="mt-4 text-gray-700">
           This project is an IRC server implemented in C++98 using network sockets.
           It allows multiple clients to connect, communicate in channels, and exchange
@@ -43,7 +43,7 @@ export default function IrcServ() {
 
         <hr className="my-6" />
 
-        {/* INSTRUCTIONS */}
+        
         <h2 className="text-2xl font-semibold mb-3">🛠️ Instructions</h2>
 
         <p className="text-gray-700 mb-3">
@@ -58,7 +58,7 @@ export default function IrcServ() {
           Connect using:
         </p>
 
-        <pre className="bg-gray-100 p-3 rounded text-sm">
+        <pre className="bg-gray-700 p-3 rounded text-sm">
 {`nc localhost 6667`}
         </pre>
 

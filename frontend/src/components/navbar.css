@@ -264,3 +264,21 @@
 		transform: translateX(0);
 	}
 }
+
+@media (max-width: 568px) {
+	.container-port {
+		
+		transform: scale(0.8);
+	}
+
+	.contain {
+	  height: auto;
+	  flex-direction: column;
+	  padding: 1rem;
+	}
+  
+	.list {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  }
