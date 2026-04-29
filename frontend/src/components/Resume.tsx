@@ -35,14 +35,16 @@ const projects = [
     desc: "Built a Unix shell in C, implementing command parsing, process management, and built-in commands.",
     tags: ["C", "Unix", "Shell"],
     type: "project",
+    link: "https://github.com/Cyrilange/minishell",
   },
   {
-    title: "Cub3D",
+    title: "Tokenizer",
     company: "42 Project",
-    period: "C",
-    desc: "Developed a 3D engine using raycasting in C, inspired by early FPS games.",
-    tags: ["C", "Raycasting", "3D"],
+    period: "solidity",
+    desc: "Developed a token with the ERC20 standart protocole.",
+    tags: ["solidity", "foundry", "wallet", "react"],
     type: "project",
+    link: "https://github.com/Cyrilange/Tokenizer",
   },
   {
     title: "ft_irc",
@@ -51,6 +53,7 @@ const projects = [
     desc: "Implemented an IRC server in C++ following RFC standards, handling multiple clients and command parsing.",
     tags: ["C++", "Networking", "RFC"],
     type: "project",
+    link: "https://github.com/Cyrilange/ft_irc",
   },
   {
     title: "Transcendence",
@@ -59,6 +62,7 @@ const projects = [
     desc: "Full-stack web application built with React, Node.js (Express), and Docker, featuring real-time interactions.",
     tags: ["React", "Node.js", "Docker"],
     type: "project",
+    link: "https://github.com/Cyrilange/Transcendence",
   },
 ];
 
@@ -98,6 +102,12 @@ function Card({ item, index }: { item: typeof experiences[0]; index: number }) {
         padding: "0 16px",
       }}
     >
+       <a
+        href={(item as any).link}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none" }}
+      >
       <div
         style={{
           width: "min(480px, 100%)",
@@ -108,6 +118,7 @@ function Card({ item, index }: { item: typeof experiences[0]; index: number }) {
           position: "relative",
           backdropFilter: "blur(8px)",
           transition: "border-color 0.3s, transform 0.3s",
+          cursor: item.type === "project" ? "pointer" : "default",
         }}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,204,0,0.5)";
@@ -118,7 +129,7 @@ function Card({ item, index }: { item: typeof experiences[0]; index: number }) {
           (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
         }}
       >
-        {/* accent line */}
+       
         <div style={{
           position: "absolute",
           top: 0,
@@ -172,6 +183,7 @@ function Card({ item, index }: { item: typeof experiences[0]; index: number }) {
           ))}
         </div>
       </div>
+      </a>
     </div>
   );
 }
@@ -180,7 +192,7 @@ export default function Resume() {
   return (
     <section style={{ padding: "80px 0", maxWidth: "900px", margin: "0 auto" }}>
 
-      {/* Section title */}
+      
       <div style={{ textAlign: "center", marginBottom: "64px", padding: "0 16px" }}>
         <span style={{
           fontSize: "11px",
@@ -202,12 +214,12 @@ export default function Resume() {
         </h2>
       </div>
 
-      {/* Experience */}
+      
       {experiences.map((item, i) => (
         <Card key={item.title} item={item} index={i} />
       ))}
 
-      {/* Divider */}
+      
       <div style={{
         display: "flex",
         alignItems: "center",
@@ -221,7 +233,7 @@ export default function Resume() {
         <div style={{ flex: 1, height: "1px", background: "rgba(255,204,0,0.15)" }} />
       </div>
 
-      {/* Projects */}
+    
       {projects.map((item, i) => (
         <Card key={item.title} item={item} index={i} />
       ))}
