@@ -124,6 +124,19 @@
 	animation: orbit3-large 12s ease-in-out infinite reverse;
 }
 
+.gitLink{
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 900;
+	
+
+
+}
+
+.gitLink a {
+	text-decoration: none;
+	color: white; 
+  }
 
 @keyframes orbit1-small {
 	0%, 100% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
