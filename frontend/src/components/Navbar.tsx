@@ -31,6 +31,7 @@ function Navbar() {
 				<div className="triple-circle e3 c3"></div>
 
 				<h1>Cyril Salamite</h1>
+				<h4><a href="https://github.com/Cyrilange">Github Link</a></h4>
 			</div>
 			<ul className="list">
 				<li><Link to="/" onClick={() => scrollTo("about")}>About</Link></li>
