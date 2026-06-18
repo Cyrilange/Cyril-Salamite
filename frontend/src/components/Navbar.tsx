@@ -13,13 +13,21 @@ function Navbar() {
 
 	return (
 		<header className="contain">
-			<div className="container-port hidden sm:flex">
-				<div>
-					<h1>Cyril Salamite</h1>
-					<h2>Full stack Developer</h2>
-					<h2 className="gitLink"><a href="https://github.com/Cyrilange" target="_blank" rel="noopener noreferrer">Github Link</a></h2>
-				</div>
-			</div>
+		<div className="container-port hidden sm:flex">
+		<div className="hero-card">
+			<h1 className="hero-title">Cyril Salamite</h1>
+			<h4 className="hero-subtitle">Full stack Developer</h4>
+			<h6 className="gitLink">
+			<a
+				href="https://github.com/Cyrilange"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Github
+			</a>
+			</h6>
+		</div>
+		</div>
 			<ul className="list">
 				<li><Link to="/" onClick={() => scrollTo("about")}>About</Link></li>
 				<li><Link to="/" onClick={() => scrollTo("projects")}>Projects</Link></li>

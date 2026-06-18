@@ -7,8 +7,6 @@
 	
 }
 
-
-
 .container-port {
 	position: relative;
 	width: 100%;
@@ -17,10 +15,16 @@
 	display: flex !important;
 	align-items: center;
 	justify-content: center;
-	margin-right: 9rem;
+	margin-right: 4rem;
+	margin: 0 auto;
 }
 
-.container-port > div {
+h4 {
+	color: rgb(255, 204, 0)!important;
+	font-size: clamp(1.2rem, 3vw, 3rem)!important;
+}
+
+.hero-content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -29,24 +33,38 @@
 	width: 100%;
 }
 
-.container-port h1 {
-	position: relative;
-	z-index: 10;
+.hero-card {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 204, 0, 0.2);
+	border-radius: 18px;
+	padding: 40px 60px;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	transition: 0.3s ease;
+}
+
+.hero-card:hover {
+	transform: translateY(-6px);
+	border-color: rgba(255, 204, 0, 0.5);
+}
+
+.hero-title {
 	font-size: clamp(2.2rem, 9vw, 10rem);
 	margin: 0;
-	padding: 0;
 	color: white;
 	white-space: nowrap;
 	text-align: center;
 	text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
-h2 {
-	position: relative;
-	z-index: 10;
+.hero-subtitle {
 	font-size: clamp(1.8rem, 7vw, 8rem);
 	margin: 0;
-	padding: 0;
 	color: white;
 	white-space: nowrap;
 	text-align: center;
@@ -100,17 +118,17 @@ h2 {
 }
 
 .list > li {
-	color: #ff0099;
+	color: rgb(255, 204, 0);
 	font-size: 1.2rem;
 	font-weight: 600;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	text-shadow: 0 0 10px #ff0099;
+	text-shadow: 0 0 10px rgba(255, 0, 212, 0.138);
 }
 
 .list > li:hover {
-	color: #ff33cc;
-	text-shadow: 0 0 20px #ff33cc;
+	color: rgb(255, 204, 0);
+	text-shadow: 0 0 20px rgba(255,204,0,0.15);
 	transform: translateY(-2px);
 }
 
