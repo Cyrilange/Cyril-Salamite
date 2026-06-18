@@ -14,18 +14,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+	overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Space Grotesk', sans-serif;
   line-height: 1.5;
-  background: linear-gradient(
-    135deg,
-    #111 90%,
-    var(--accent-color) 10%
-  );
-  color: var(--text-main);
+  background: #111;
 }
 
 ul {

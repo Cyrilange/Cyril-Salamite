@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 
+
+
 const experiences = [
   {
     title: "Blockchain Support Service",
     company: "Binance",
     period: "Dec 2022 – Dec 2023",
-    desc: "Handled blockchain-related customer issues, transactions, and technical troubleshooting in a fast-paced environment.",
+    desc: "Resolved complex technical issues in high-volume environment, Investigated system and API-related problems, Communicated technical solutions to non-technical users ,Developed strong debugging and analytical skills",
     tags: ["Blockchain", "Web3", "Support"],
     type: "work",
   },
@@ -13,7 +15,7 @@ const experiences = [
     title: "Mobile Frontend Developer",
     company: "AISpeak",
     period: "Apr 2025 – Sep 2025",
-    desc: "Developed and improved mobile UI using modern frontend technologies, focusing on performance and user experience.",
+    desc: "Developing reusable components for large-scale React Native applications, Collaborating closely with UI/UX teams  to ensure seamless project management and delivery, Writing and maintaining automated tests using Jest to ensure code quality and reliability, Debugging and resolving issues promptly to enhance application performance and user experience",
     tags: ["React Native", "Mobile", "UI/UX"],
     type: "work",
   },
@@ -28,6 +30,33 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    title: "Kamachasi Invercion",
+    company: "Kamachasi",
+    period: "Frontend",
+    desc: "Single application page with input for receving email, it simulate a demand of a micro credit , once the mail is send the owner of the compagny can check the data of the user",
+    tags: ["Mail", "javascript", "vercel"],
+    type: "project",
+    link: "https://kamachasi-inversionnes.vercel.app/",
+  },
+  {
+    title: "Transcendence",
+    company: "42 Project",
+    period: "Full-Stack",
+    desc: "Full-stack web application built with React, Node.js (Express), and Docker, featuring real-time interactions.",
+    tags: ["React", "Node.js", "Docker"],
+    type: "project",
+    link: "https://github.com/Cyrilange/Transcendence",
+  },
+  {
+    title: "Camagru",
+    company: "42 Project",
+    period: "Full-Stack",
+    desc: "Full-stack web application built with React, Node.js (Express), and Docker, social webcam photo like.",
+    tags: ["javascript", "Css", "Html", "Node.js", "Docker"],
+    type: "project",
+    link: "https://github.com/Cyrilange/Camagru",
+  },
   {
     title: "Minishell",
     company: "42 Project",
@@ -55,15 +84,9 @@ const projects = [
     type: "project",
     link: "https://github.com/Cyrilange/ft_irc",
   },
-  {
-    title: "Transcendence",
-    company: "42 Project",
-    period: "Full-Stack",
-    desc: "Full-stack web application built with React, Node.js (Express), and Docker, featuring real-time interactions.",
-    tags: ["React", "Node.js", "Docker"],
-    type: "project",
-    link: "https://github.com/Cyrilange/Transcendence",
-  },
+
+ 
+
 ];
 
 function Card({ item, index }: { item: typeof experiences[0]; index: number }) {
@@ -189,6 +212,18 @@ function Card({ item, index }: { item: typeof experiences[0]; index: number }) {
 }
 
 export default function Resume() {
+  useEffect(() => {
+
+    const hash = window.location.hash;
+    if (hash === '#about') {
+      setTimeout(() => {
+        const element = document.getElementById('about');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100)
+    }
+  }, []);
   return (
     <section style={{ padding: "80px 0", maxWidth: "900px", margin: "0 auto" }}>
 
@@ -203,7 +238,8 @@ export default function Resume() {
         }}>
           Career
         </span>
-        <h2 style={{
+        <h2 id="experience" style={{
+          
           fontSize: "clamp(32px, 6vw, 52px)",
           fontWeight: 800,
           margin: "12px 0 0",
@@ -227,7 +263,7 @@ export default function Resume() {
         margin: "48px 16px",
       }}>
         <div style={{ flex: 1, height: "1px", background: "rgba(255,204,0,0.15)" }} />
-        <span style={{ fontSize: "11px", letterSpacing: "0.3em", color: "#ffcc00", textTransform: "uppercase", fontWeight: 700 }}>
+        <span id="projects" style={{ fontSize: "11px", letterSpacing: "0.3em", color: "#ffcc00", textTransform: "uppercase", fontWeight: 700 }}>
           Projects
         </span>
         <div style={{ flex: 1, height: "1px", background: "rgba(255,204,0,0.15)" }} />
